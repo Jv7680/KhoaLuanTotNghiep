@@ -1,0 +1,94 @@
+USE laptopshoponline;
+
+-- insert accounts
+insert into accounts(username, passwords,firstname,lastname,address,gmail,phonenumber,activation_code,passwordreset_code,active_account,provider,roles) 
+values ("vy","$2a$12$Kq19WMhEm3ZcABroPMiVZO2ERyhO0.wttcpHKYUF7JegGd5LV5kgS", "kim","vy","Quảng Ngãi","vy@gmail.com","012121","","",1,1,2);
+-- mk 1234
+insert into accounts(username, passwords,firstname,lastname,address,gmail,phonenumber,activation_code,passwordreset_code,active_account,provider,roles)
+values ("doan","$2a$12$d0ffly5D.xsQSArJruAHsugNn6.0gIbXh/Nmy0EtDY4c9OAPuWoou", "văn","đoàn","Quảng Ngãi","doan@gmail.com","0132322121","","",1,1,2);
+-- mk 12345
+insert into accounts(username, passwords,firstname,lastname,address,gmail,phonenumber,activation_code,passwordreset_code,active_account,provider,roles)
+values ("tu","$2a$12$69P4b7LD3p6QCe92VJcuxuymCzVhzwv/hAXtYd1i.1yUUsJZojnB2", "tu","nguyen","Quảng Nam","nguyenthanhtu@gmail.com","0326000692","","",1,1,1);
+-- mk 123456
+
+-- insert news
+insert into news(account_id,title,content,image_link,created,isdeleted) values (3, 'MSI mạnh mẽ I7', 'Máy tính MSI hiện nay đang rất được nhiều bạn trẻ gaming ưa chuộng và ', 'linkanh','2022-10-10',0);
+insert into news(account_id,title,content,image_link,created,isdeleted) values (3, 'DELL mạnh mẽ I7', 'Máy tính DELL hiện nay đang rất được nhiều bạn trẻ gaming ưa chuộng và ', 'linkanh2','2022-08-10',0);
+
+
+-- insert supplier
+insert into supplier (supplier_name,image_link,isdeleted)
+values ('HP','https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/imagesup/logo-2834458_960_720.jpg?raw=true',0);
+insert into supplier (supplier_name,image_link,isdeleted)
+values ('DELL','https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/imagesup/Dell-logo.jpg?raw=true',0);
+insert into supplier (supplier_name,image_link,isdeleted)
+values ('ASUS','https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/imagesup/logo-asus-inkythuatso-2-01-26-09-21-11.jpg?raw=true',0);
+insert into supplier (supplier_name,image_link,isdeleted)
+values ('ACER','https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/imagesup/logo-acer-inkythuatso-2-01-27-15-49-45.jpg?raw=true',0);
+insert into supplier (supplier_name,image_link,isdeleted)
+values ('MSI','https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/imagesup/logo-msi-inkythuatso-4-01-27-14-36-47.jpg?raw=true',0);
+
+-- insert product
+-- la[top HP
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop HP 14-DQ2055WM 39K15UA', 1, 10, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/hp-14s-fq1080au-r3-4k0z7pa-win11-xy-2.jpg?raw=true', 20000000, '', 'Phủ nhôm bền bỉ, không gian trải nghiệm đủ đầy</br>Hiệu năng lấp đầy nhu cầu người dùng',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop HP 15S-FQ2602TU 4B6D3PA', 1, 5, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/hp-15s-du1108tu-i3-10110u-2z6l7pa-2.jpg?raw=true', 22000000, '', 'Cấu hình ổn định với chip intel thế hệ 11</br>Kích thước màn hình 15,6 inches và độ phân giải Full HD',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop HP 15s fq2662TU i3', 1, 10, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/hp-340s-g7-i3-240q4pa-1-org.jpg?raw=true', 20000000, '', 'Laptop HP 15s fq2662TU i3 (6K795PA) sẽ là sự lựa chọn phù hợp cho học sinh, sinh viên muốn tìm kiếm một chiếc laptop học tập - văn phòng sở hữu cấu hình ổn định, đáp ứng tốt mọi nhu cầu cơ bản cùng một mức giá lý tưởng, dễ dàng tiếp cận</br>Hiệu năng lấp đầy nhu cầu người dùng',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop HP VICTUS 16 d0292TX', 1, 10, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/hp-340s-g7-i3-240q4pa-2-1-org.jpg?raw=true', 20000000, '', 'Laptop HP VICTUS 16 d0292TX i5 (5Z9R3PA) sẽ là một người bạn đồng hành đắc lực trên mọi chiến trường ảo của game thủ nhờ ngoại hình sang trọng, hiện đại cùng những thông số kỹ thuật mạnh mẽ.</br>Hiệu năng lấp đầy nhu cầu người dùng',0);
+
+-- laptop DELL
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop Dell Inspiron 3501 5580BLK', 2, 15, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/dell-gaming-g15-5511-i7-p105f006agr-01.jpg?raw=true', 15000000, '', 'Thiết kế gọn nhẹ, màn hình kích thước lớn</br>Hiệu năng mượt cùng viên pin đủ dùng',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('LAPTOP DELL INSPIRON 3505 i3505-A542BLK', 2, 5, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/dell-gaming-g15-5511-i7-p105f006agr-2-1.jpg?raw=true', 18000000, '', 'Thiết kế mỏng nhẹ, màn hình kích thước lớn với viền siêu mỏng</br>Hiệu năng ổn định trong tầm giá với con chip AMD Ryzen 5 và SSD PCIE',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop Dell Gaming G15 5515 R5', 2, 10, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/dell-gaming-g15-5515-r5-p105f004dgr-4.jpg?raw=true', 20000000, '', 'Bộ hiệu năng gây ấn tượng đến từ con chip AMD mạnh mẽ cùng thiết kế cá tính, nổi bật, laptop Dell Gaming G15 5515 R5 (P105F004DGR) sẽ đáp ứng tối ưu mọi nhu cầu từ các tác vụ văn phòng cơ bản đến những ứng dụng đồ họa, chơi game giải trí chuyên nghiệp.</br>Thiết kế đậm chất riêng, đầy ấn tượng',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop Dell Inspiron 15 3511', 2, 10, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/dell-vostro-3510-i5-p112f002bbl-2-2.jpg?raw=true', 20000000, '', 'Laptop Dell Inspiron 15 3511 i3 (P112F001CBL) sở hữu thiết kế sang trọng, thanh lịch với sức mạnh hiệu năng đến từ dòng chip Intel thế hệ thứ 11 đáp ứng tốt các tác vụ học tập, văn phòng và giải trí cơ bản của người dùng học sinh, sinh viên.</br>Hiệu năng lấp đầy nhu cầu người dùng',0);
+-- laptop ASUS
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop ASUS VivoBook 15 A515EA', 3, 15, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/asus-vivobook-x515ea-i3-bq1415w-2-2.jpg?raw=true', 20000000, '', 'Thiết kế gọn nhẹ, màn hình kích thước lớn</br>Hiệu năng mượt cùng viên pin đủ dùng',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop ASUS VivoBook Flip TM420IA-EC031T', 3, 25, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/asus-vivobook-x515ea-i3-bq1415w-1-1.jpg?raw=true', 18000000, '', 'Thiết kế mỏng nhẹ, bản lề quay 360 ấn tượng',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop Asus TUF Gaming FX506LHB', 3, 10, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/asus-tuf-gaming-fx506hm-i7-hn366w-1.jpg?raw=true', 20000000, '', 'Laptop Asus TUF Gaming được bao bọc bởi lớp vỏ nhựa màu đen huyền bí, khối lượng 2.3 kg cho phép bạn chiến game ở mọi không gian</br>Hiệu năng lấp đầy nhu cầu người dùng',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop Asus VivoBook 15X OLED A1503ZA ', 3, 10, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/asus-tuf-gaming-fx507z-i7-hn123w-1-1.jpg?raw=true', 20000000, '', 'Laptop Asus VivoBook 15X OLED A1503ZA i5 (L1290W) là phiên bản laptop cao cấp - sang trọng không chỉ giải quyết triệt để các tác vụ học tập, văn phòng nhờ sức mạnh bùng nổ đến từ bộ vi xử lý Intel thế hệ 12 mà còn mang đến không gian giải trí trọn vẹn khi sở hữu những thông số màn hình ấn tượng. </br>Hiệu năng lấp đầy nhu cầu người dùng',0);
+
+-- laptop ACER
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop Acer Aspire 3 A315-56-37DV', 4, 25, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/acer-aspire-3-a315-57-379k-i3-nxkagsv001-3-1.jpg?raw=true', 18000000, '', 'Thiết kế mỏng nhẹ, cứng cáp</br>Cấu hình ổn định với chip Intel Core i3-1005G1',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop Acer Aspire 5 A514-54-540F', 4, 5, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/acer-aspire-a315-56-32tp-i3-nxhs5sv00k-1.jpg?raw=true', 23000000, '', 'Thiết kế mỏng nhẹ, cứng cáp</br>Cấu hình ổn định',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop Acer TravelMate B3 TMB311 31 C2HB N4020', 4, 10, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/acer-aspire-a315-56-32tp-i3-nxhs5sv00k-xy-2%20(1).jpg?raw=true', 20000000, '', 'Laptop Acer TravelMate B3 TMB311 31 C2HB (NX.VNFSV.006) nhắm đến phân khúc laptop học tập - văn phòng, phục vụ cho các nhu cầu cơ bản trên laptop, với kích thước nhỏ gọn và hiệu năng đủ dùng, là sự lựa chọn tốt cho học sinh, sinh viên.</br>Hiệu năng lấp đầy nhu cầu người dùng',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H', 4, 10, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/acer-nitro-5-gaming-an515-45-r86d-r7-nhqbcsv005-xy-2.jpg?raw=true', 20000000, '', 'Phá cách với diện mạo mạnh mẽ đến từ laptop Acer Nitro 5 Gaming AN515 45 R6EV R5 5600H (NH.QBMSV.006) mang đến cho người dùng hiệu năng ổn định, hỗ trợ bạn trong mọi tác vụ hằng ngày hay chiến những trận game cực căng một cách mượt mà.</br>Kiểu dáng nổi bật, thu hút mọi ánh nhìn',0);
+
+-- laptpo MSI
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop MSI Gaming BRAVO 15 A4DCR-270VN', 5, 5, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/msi-gaming-gf65-thin-10ue-i5-286vn-1-2.jpg?raw=true', 23000000, '', 'Màn hình 15.6" hỗ trợ công nghệ Freesynce, tần số quét màn hình 144Hz</br>Viền màn hình siêu mỏng, thiết kế vỏ nhôm cao cấp',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop MSI Gaming GL75 Leopard 10SCSK 056VN', 5, 5, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/msi-gaming-alpha-15-b5eek-r7-218vn-1-1.jpg?raw=true', 23000000, '', 'Thiết kế nhỏ gọn, màn hình đến 17.3 inches</br>Cấu hình mạnh mẽ với Core i5-10200H, 8GB RAM, 512GB SSD, VGA GTX 1650 Ti',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop MSI Gaming GF63 Thin 11UC i5 11400H', 5, 10, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/msi-gaming-leopard-gp76-11ug-i7-823vn-1.jpg?raw=true', 20000000, '', 'Laptop MSI Gaming GF63 Thin 11UC (445VN) khơi nguồn mọi cảm hứng cho game thủ bởi ngoại hình hầm hố, năng động cùng những thông số kỹ thuật ấn tượng. </br>Hiệu năng lấp đầy nhu cầu người dùng',0);
+insert into product (product_name,supplier_id,quantity,image,unitprice,discount,description,isdeleted)
+values ('Laptop MSI Modern 14 B11MOU i7 1195G7', 5, 10, 'https://github.com/PhiBuiYH/Project_TieuLuanChuyenNganh/blob/master/IMAGE/msi-creator-z16p-b12ugst-i7-050vn-a-01.jpg?raw=true', 20000000, '', 'MSI Modern 14 B11MOU i7 (847VN) là một chiếc laptop học tập - văn phòng ở mức giá tầm trung nhưng sở hữu sức mạnh hiệu năng vượt trội đến từ con chip Intel thế hệ 11 hiện đại cùng vẻ ngoài sang trọng, cao cấp, hứa hẹn đáp ứng tốt cho công việc cũng như giải trí hoàn hảo.</br>Hiệu năng lấp đầy nhu cầu người dùng',0);
+
+-- insert orders-orderdetail
+insert into orders(account_id,order_date, receipt_date,total_amount,shipping,address,customer_note,status)
+values (1,'2021-10-5','2021-10-10','38000000',0,'Đồng Nai','Đúng hàng giúp mình^_^',4);
+insert into orderdetail(order_id,product_id,quantity)
+values (1,5,1);
+insert into orderdetail(order_id,product_id,quantity)
+values (1,6,1);
+
+insert into orders(account_id,order_date, receipt_date,total_amount,shipping,address,customer_note,status)
+values (2,'2021-11-15','2021-11-18','41000000',0,'Quảng Ngãi','Lấy màu đen nha shop',4);
+insert into orderdetail(order_id,product_id,quantity)
+values (2,7,1);
+insert into orderdetail(order_id,product_id,quantity)
+values (2,9,1);
